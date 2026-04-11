@@ -1,0 +1,44 @@
+
+<!DOCTYPE html> <html lang="en"> <head> <meta charset="UTF-8" /> <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <title>COQUI</title> <style> :root{ --bg:#08111d; --panel:#0f1b2d; --panel2:#13233a; --text:#eef6ff; --muted:#9fb3c8; --line:rgba(255,255,255,.08); --accent:#9ef0a7; --accent2:#7bd7ff; } *{box-sizing:border-box} html,body{margin:0;padding:0;background:radial-gradient(circle at top left,#122540 0%,#08111d 45%,#050b14 100%);color:var(--text);font-family:Arial,Helvetica,sans-serif} a{text-decoration:none;color:inherit} img{max-width:100%;display:block} .wrap{width:min(1180px,92vw);margin:0 auto} .nav{ position:sticky;top:0;z-index:20; background:rgba(8,17,29,.75); backdrop-filter:blur(10px); border-bottom:1px solid var(--line); } .nav-inner{ display:flex;align-items:center;justify-content:space-between; gap:14px;padding:16px 0; } .brand{ display:flex;align-items:center;gap:12px;font-weight:800; letter-spacing:.5px;font-size:32px; } .badge{ width:38px;height:38px;border-radius:50%; overflow:hidden; box-shadow:0 0 14px rgba(123,215,255,.25); border:1px solid rgba(255,255,255,.1); background:#0d1627; display:flex;align-items:center;justify-content:center; flex:0 0 auto; } .badge img{width:100%;height:100%;object-fit:cover} .nav-links{ display:flex;align-items:center;gap:18px;color:var(--muted);font-size:15px } .nav-links a:hover{color:#fff} .nav-cta{ background:var(--accent);color:#09131d;font-weight:700; padding:12px 18px;border-radius:999px; box-shadow:0 10px 30px rgba(158,240,167,.18); } .hero{padding:44px 0 34px} .eyebrow{ color:var(--accent2);font-size:14px;font-weight:700; margin-bottom:18px;opacity:.95 } .hero-grid{ display:grid;grid-template-columns:1.05fr .95fr;gap:26px;align-items:stretch } .hero-copy{ background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.02)); border:1px solid var(--line); border-radius:28px; padding:34px; box-shadow:0 20px 60px rgba(0,0,0,.22); } h1{ margin:0 0 18px; font-size:clamp(48px,7vw,86px); line-height:.96; letter-spacing:-2px; } .lead{ color:#d9e7f6; font-size:clamp(18px,2vw,22px); line-height:1.6; max-width:760px; margin-bottom:28px; } .hero-actions{ display:flex;flex-wrap:wrap;gap:14px;margin-bottom:24px } .btn{ display:inline-flex;align-items:center;justify-content:center; min-height:52px;padding:0 22px;border-radius:16px; border:1px solid var(--line);font-weight:700;font-size:17px; background:rgba(255,255,255,.04); color:#fff; } .btn-primary{ background:var(--accent);color:#09131d;border:none; } .btn-secondary:hover,.btn:hover{transform:translateY(-1px)} .btn-gecko{ background:linear-gradient(135deg,#7c5cff,#b06eff); border:none; } .stats{ display:grid;grid-template-columns:repeat(4,1fr);gap:14px } .card-stat{ background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.02)); border:1px solid var(--line); border-radius:22px;padding:18px 18px 16px; min-height:112px; } .k{color:var(--muted);font-size:14px;margin-bottom:10px} .v{font-size:22px;font-weight:800;line-height:1.25} .v img{ width:24px;height:24px;border-radius:6px; object-fit:cover;vertical-align:middle;margin-left:6px } .hero-art{ 
+background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.02)); 
+border:1px solid var(--line); 
+border-radius:28px; 
+padding:18px; 
+min-height:100%; 
+display:flex;
+align-items:center;
+justify-content:center;
+overflow:hiden;
+}
+.hero-art img{ 
+display:block; 
+width:100%; 
+height:100%; 
+object-fit:cover; 
+border-radius:20px;
+ }
+box-shadow:0 20px 60px rgba(0,0,0,.22); } 
+ .section{padding:10px 0 56px} .section-head{ display:flex;align-items:end;justify-content:space-between;gap:16px; margin-bottom:18px } .section h2{margin:0;font-size:34px} .section p{margin:0;color:var(--muted);line-height:1.65} .grid-2{ display:grid;grid-template-columns:1fr 1fr;gap:18px } .panel{ background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.02)); border:1px solid var(--line); border-radius:24px;padding:24px; } .pill{ display:inline-flex;align-items:center;gap:10px; padding:10px 14px;border-radius:999px; border:1px solid var(--line); background:rgba(255,255,255,.03); color:#dfeeff;font-size:14px;font-weight:700 } .trust-list{ display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:14px } .trust-item{ border:1px solid var(--line);background:rgba(255,255,255,.03); border-radius:18px;padding:16px;color:#eaf5ff;font-weight:700 } .footer{ padding:30px 0 50px;color:var(--muted);text-align:center; border-top:1px solid var(--line);margin-top:24px } @media (max-width: 980px){ .hero-grid,.grid-2{grid-template-columns:1fr}
+ .stats{grid-template-columns:repeat(2,1fr)} .nav-links .hide-sm{display:none} } @media (max-width: 640px){ .nav-inner{gap:10px} .brand{font-size:24px} .nav-cta{padding:10px 14px;font-size:14px} .hero-copy{padding:22px} .stats{grid-template-columns:1fr} .trust-list{grid-template-columns:1fr} } .ca-box{ margin-top:20px; padding:12px 16px; background:rgba(255,255,255,0.04); border:1px solid var(--line); border-radius:14px; font-size:13px; } .ca-label{ color:var(--muted); margin-bottom:6px; } .ca-value{ word-break:break-all; font-weight:600; color:#dfeeff; }
+</style> 
+</head> 
+<body> 
+<header class="nav"> <div class="wrap nav-inner"> <a class="brand" href="#top"> <div class="badge"> <img src="logo.jpg" alt="COQUI logo"> </div> <span>COQUI</span> </a> <nav class="nav-links"> <a class="hide-sm" href="#about">About</a> <a class="hide-sm" href="#trust">Trust</a> <a class="hide-sm" href="#links">Links</a> <a class="nav-cta" href="https://t.me/COQUIcoinPR" target="_blank" rel="noopener">Join Telegram</a> </nav> </div> </header> <main id="top"> <section class="hero"> <div class="wrap hero-grid"> 
+<div class="hero-copy"> 
+<div class="eyebrow">Puerto Rican spirit • Solana community • Organic growth</div> 
+<h1>We don’t fold.<br>We build.</h1> 
+<p class="lead"> COQUI is a community-driven Solana project inspired by Puerto Rican culture and the iconic coquí frog. Built around real engagement, steady growth, and a strong long-term identity — not fake hype, not paid noise. 
+</p> <div class="hero-actions" id="links"> 
+<a class="btn btn-primary" href="https://raydium.io/" target="_blank" rel="noopener">Buy on Raydium</a> <a class="btn btn-secondary" href="https://www.geckoterminal.com/solana/pools/6k3k388SUn9NW8nWrZiRHucA4eUGjx99zC6dTa3ygY1u" target="_blank" rel="noopener">View Chart</a> <a class="btn btn-secondary" href="https://x.com/COQUICOINPR" target="_blank" rel="noopener">Follow on X</a> <a class="btn btn-gecko" href="https://www.geckoterminal.com/solana/pools/6k3k388SUn9NW8nWrZiRHucA4eUGjx99zC6dTa3ygY1u" target="_blank" rel="noopener">Listed on GeckoTerminal</a> <a class="btn btn-gecko" href="https://t.me/COQUIcoinPR" target="_blank" rel="noopener">Join Telegram</a> <a class="btn btn-gecko" href="https://instagram.com/COQUI_COIN_PR" target="_blank" rel="noopener">Instagram</a> <a class="btn btn-gecko" href="https://www.facebook.com/profile.php?id=61580875897032" target="_blank" rel="noopener">Facebook</a>
+ <a class="btn btn-gecko">Discord (Coming Soon 👀)</a> <div 
+<div class="ca-box"> 
+<div class="ca-label">Contract Address</div> 
+<div class="ca-value">BaXVkada2ndgxAoMMEBpBXEbEJbX8svPSrug6iUNHUbp</div> 
+</div>
+
+ </div> <div class="stats"> <div class="card-stat"> <div class="k">Network</div> <div class="v">Solana</div> </div> <div class="card-stat"> <div class="k">Focus</div> <div class="v">Community First</div> </div> <div class="card-stat"> <div class="k">Growth Style</div> <div class="v">Organic</div> </div> <div class="card-stat"> 
+ <div class="k">Identity</div> <div class="v">Puerto Rico <img src="logo.jpg" alt="COQUI badge"></div> </div> </div> </div> 
+<div class="hero-art"> 
+  <img src="hero.png" alt="COQUI hero art"> 
+</div>
+ </div> </section> <section class="section" id="about"> <div class="wrap grid-2"> <div class="panel"> <div class="section-head"> <h2>Built different.</h2> </div> <p> COQUI is about building a recognizable project with stronger visibility and steady confidence over time. Community-led, culture-rooted, and pushed the right way. </p> </div> <div class="panel" id="trust"> <div class="section-head"> <h2>Trust signals</h2> </div> <div class="pill">GeckoTerminal approved ✅</div> <div class="trust-list"> <div class="trust-item">Community driven</div> <div class="trust-item">Organic growth</div> <div class="trust-item">Puerto Rican identity 🇵🇷</div> <div class="trust-item">Live website active</div> </div> </div> </div> </section> </main> <footer class="footer"> <div class="wrap"> COQUI • Built by community • Puerto Rico on Solana </div> </footer> </body> </html>
